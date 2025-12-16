@@ -6,12 +6,20 @@ A **one-stop repository for Minecraft server core downloads**, integrating all v
 ---
 
 ## ✨ 核心特性 | Core Features
-- **全版本覆盖**：包含 1.2、1.3 ... 1.21 等主流版本，适配不同模组与插件需求
-  - **Full Version Coverage**: Includes major versions from 1.2 to 1.21, compatible with different mod and plugin requirements
+- **全版本覆盖**：包含 1.2、1.3 ... 1.21 等主流版本
+  - **Full Version Coverage**: Includes mainstream versions such as 1.2, 1.3... 1.21.
 - **下载便捷**：按版本分类存放，目录结构清晰，直接跳转对应文件夹即可下载
   - **Easy Download**: Classified by version with a clear directory structure—directly jump to the corresponding folder to download
 - **持续更新**：同步跟进 Minecraft 官方版本迭代，及时补充最新服务器核心文件
   - **Continuous Updates**: Sync with official Minecraft version iterations and promptly add the latest server core files
+
+---
+
+## 🔄 更新项目说明（Update Project Notes）
+| 说明项（Item） | 详情（Details） |
+|---------------|----------------|
+| 更新触发条件 | 当Minecraft发布新版本（正式版）时，本项目将同步进行更新<br>This project will be updated simultaneously when Minecraft releases a new version. |
+| 更新内容 | 1. 添加Minecraft新版本（正式版）服务器核心文件<br>Add Minecraft new version (official version) server core files |
 
 ---
 
@@ -66,8 +74,8 @@ If you find missing versions, corrupted files, or have other optimization sugges
 ---
 
 ## ⭐ 求 Star 支持 | Request Star Support
-如果这个仓库帮你节省了找服务器核心的时间，不妨点亮右上角的 **Star** 🌟 ！你的认可就是我持续维护、更新版本的最大动力，也能让更多 Minecraft 玩家发现这个实用工具～
-If this repository has saved you time searching for server cores, please light up the **Star** 🌟 in the upper right corner! Your recognition is the greatest motivation for me to continue maintaining and updating versions, and it will also help more Minecraft players discover this useful tool!
+如果这个仓库帮你节省了找服务器核心的时间，不妨点亮右上角的 **Star** 🌟 ！你的认可就是我持续维护、更新版本的最大动力，也能让更多 Minecraft 玩家发现这个实用仓库～
+If this repository saves you time searching for server cores, please give it a **Star** 🌟 in the upper right corner! Your support is my biggest motivation to continue maintaining and updating the version, and it will also help more Minecraft players discover this useful repository!
 
 ---
 
@@ -75,9 +83,13 @@ If this repository has saved you time searching for server cores, please light u
 感谢所有为项目付出的朋友，是你们让这个工具更加完善！
 Thank you to all friends who have contributed to the project—you have made this tool more complete!
 
+---
+
 ### 核心维护者 | Core Maintainers
 - [Minecraft-1314](https://github.com/Minecraft-1314)：项目发起者，负责版本同步与仓库维护
   - [Minecraft-1314](https://github.com/Minecraft-1314): Project initiator, responsible for version synchronization and repository maintenance
+
+---
 
 ### 社区贡献者 | Community Contributors
 - [待补充] | [To be added]
@@ -86,3 +98,5 @@ Thank you to all friends who have contributed to the project—you have made thi
 
 💡 持续关注仓库，获取最新版本服务器核心更新通知！
 💡 Follow the repository to get notifications about the latest server core updates!
+
+---

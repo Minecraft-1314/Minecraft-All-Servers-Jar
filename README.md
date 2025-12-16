@@ -72,7 +72,7 @@ If this repository has saved you time searching for server cores, please light u
 ---
 
 ## 🤝 赞助支持 | Sponsorship Support
-本项目完全开源免费，但服务器维护、版本同步等工作需要持续投入时间与精力。如果你愿意支持项目的长期发展，可通过以下方式赞助，所有赞助将全部用于项目优化与更新：
+本项目完全开源免费，但版本同步等工作需要持续投入时间与精力。如果你愿意支持项目的长期发展，可通过以下方式赞助，所有赞助将全部用于项目优化与更新：
 This project is completely open-source and free, but server maintenance, version synchronization, and other work require continuous investment of time and energy. If you are willing to support the long-term development of the project, you can sponsor through the following methods—all sponsorships will be used for project optimization and updates:
 - 微信支付：[[https://github.com/Minecraft-1314/Minecraft-All-Servers-Jar/donation-qrcode.jpg]](https://github.com/Minecraft-1314/Minecraft-All-Servers-Jar/blob/main/donation-qrcode.jpg)
 - WeChat Pay: [[(https://github.com/Minecraft-1314/Minecraft-All-Servers-Jar/donation-qrcode.jpg)]](https://github.com/Minecraft-1314/Minecraft-All-Servers-Jar/blob/main/donation-qrcode.jpg)

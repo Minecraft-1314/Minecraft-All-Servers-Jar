@@ -1,11 +1,11 @@
-# Minecraft All Servers JAR 🎮
+# Minecraft All Servers JAR 
 ### 我的世界全版本服务器核心仓库
 
 A **one-stop repository for Minecraft server core downloads**, integrating all versions of Server JAR files from 1.2 to 1.21. No need to search around—get the version you need with one click and quickly set up your own server!
 
 ---
 
-## ✨ 核心特性 | Core Features
+## 核心特性 | Core Features
 - **全版本覆盖**：包含 1.2、1.3 ... 1.21 等主流版本，适配不同模组与插件需求
   - **Full Version Coverage**: Includes major versions from 1.2 to 1.21, compatible with different mod and plugin requirements
 - **下载便捷**：按版本分类存放，目录结构清晰，直接跳转对应文件夹即可下载
@@ -15,7 +15,7 @@ A **one-stop repository for Minecraft server core downloads**, integrating all v
 
 ---
 
-## 📂 版本列表 | Version List
+## 版本列表 | Version List
 已收录以下版本的 Server JAR 文件，点击文件夹名称即可进入下载：
 The following versions of Server JAR files are included—click the folder name to download:
 - Minecraft 1.2 Server JAR files
@@ -39,10 +39,11 @@ The following versions of Server JAR files are included—click the folder name 
 - Minecraft 1.20 Server JAR files
 - Minecraft 1.21 Server JAR files
 - Minecraft 26.1 Server JAR files
+- Minecraft 26.2 Server JAR files
 
 ---
 
-## 🚀 使用说明 | Usage Guide
+## 使用说明 | Usage Guide
 1. 访问本仓库：[Minecraft-All-Servers-Jar](https://github.com/Minecraft-1314/Minecraft-All-Servers-Jar)
    1. Visit this repository: [Minecraft-All-Servers-Jar](https://github.com/Minecraft-1314/Minecraft-All-Servers-Jar)
 2. 找到对应游戏版本的文件夹并点击进入
@@ -52,13 +53,13 @@ The following versions of Server JAR files are included—click the folder name 
 
 ---
 
-## 📜 许可证 | License
+## 许可证 | License
 本项目基于开源许可证分发，具体条款请参阅 [LICENSE](LICENSE) 文件。
 This project is distributed under an open-source license. For specific terms, please refer to the [LICENSE](LICENSE) file.
 
 ---
 
-## 📞 反馈与建议 | Feedback & Suggestions
+## 反馈与建议 | Feedback & Suggestions
 若发现版本缺失、文件损坏或有其他优化建议，欢迎提交 Issue 或 Pull Request，一起完善这个实用工具～
 If you find missing versions, corrupted files, or have other optimization suggestions, please submit an Issue or Pull Request to improve this useful tool together!
 

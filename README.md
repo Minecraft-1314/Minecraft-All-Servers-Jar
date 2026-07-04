@@ -1,230 +1,88 @@
-\# Minecraft Server Downloader
-
-
-
-一键下载所有正式版 Minecraft 服务器 JAR 文件  
-
-A powerful desktop tool that lets you download any release version of the Minecraft server JAR with a single click.  
-
-No more manual searching—just select, click, and your server core is ready.
-
-
-
-\---
-
-
-
-\## 核心特性 | Core Features
-
-
-
-\- \*\*全版本覆盖\*\*：自动获取官方所有正式版列表，从早期版本到最新版均可下载  
-
-&#x20; \*\*Full Version Coverage\*\*: Automatically fetches the complete list of official release versions, from early builds to the latest
-
-
-
-\- \*\*现代化 GUI 界面\*\*：基于 PyQt6 的精美界面，支持深色 / 浅色主题切换，界面简洁直观  
-
-&#x20; \*\*Modern GUI\*\*: Beautiful PyQt6-based interface with dark / light theme switching, clean and intuitive
-
-
-
-\- \*\*多语言支持\*\*：内置中文和英文，可根据系统语言自动切换  
-
-&#x20; \*\*Multi‑language Support\*\*: Built-in Chinese and English, with automatic switching based on system language
-
-
-
-\- \*\*高性能下载\*\*：多线程设计，实时显示下载速度、进度和剩余时间，支持暂停 / 恢复 / 停止  
-
-&#x20; \*\*High‑performance Download\*\*: Multi-threaded design with real‑time speed, progress, and remaining time display; supports pause, resume, and stop
-
-
-
-\- \*\*智能管理\*\*：自动检测已下载文件，避免重复下载；磁盘空间预检查，防止空间不足  
-
-&#x20; \*\*Smart Management\*\*: Automatically detects already downloaded files to avoid duplicates; disk space pre‑check prevents insufficient storage
-
-
-
-\- \*\*便捷操作\*\*：版本搜索、全选 / 取消全选、一键开始，状态栏实时反馈  
-
-&#x20; \*\*Convenient Operation\*\*: Version search, select all / deselect all, one‑click start, with real‑time status bar feedback
-
-
-
-\- \*\*版本过滤\*\*：可筛选正式版、快照版、旧 Alpha/Beta 版，满足不同需求  
-
-&#x20; \*\*Version Filtering\*\*: Filter release, snapshot, old alpha/beta versions to meet different needs
-
-
-
-\- \*\*镜像源与自定义 API\*\*：支持切换官方 / BMCLAPI 镜像源，也可自定义版本清单 API 地址  
-
-&#x20; \*\*Mirror \& Custom API\*\*: Switch between official and BMCLAPI mirrors, or specify a custom version manifest API URL
-
-
-
-\- \*\*代理支持\*\*：HTTP / HTTPS 代理设置，方便内网或特殊网络环境  
-
-&#x20; \*\*Proxy Support\*\*: HTTP/HTTPS proxy settings for corporate or restricted networks
-
-
-
-\- \*\*跟随系统主题\*\*：自动识别系统暗色 / 明亮模式并同步界面风格（需安装 darkdetect 库）  
-
-&#x20; \*\*Follow System Theme\*\*: Automatically detects system dark/light mode and syncs the UI (requires darkdetect library)
-
-
-
-\---
-
-
-
-\## 使用说明 | Usage Guide
-
-
-
-\### 方式一：直接运行（Windows 用户推荐）
-
-下载最新版本的 `MinecraftServerDownloader.exe`（单文件免安装），双击即可运行。  
-
-\*\*Download the latest `MinecraftServerDownloader.exe` (portable, no installation required) and run it directly.\*\*
-
-
-
-\### 方式二：从源码运行（Python 环境）
-
-1\. 安装 Python 3.7 或以上版本  
-
-2\. 安装依赖库：
-
-&#x20;  ```bash
-
-&#x20;  pip install pyqt6 requests darkdetect
-
-&#x20;  ```
-
-3\. 下载本项目源码并运行：
-
-&#x20;  ```bash
-
-&#x20;  python "Minecraft Server JAR files Download.py"
-
-&#x20;  ```
-
-
-
-\### 使用步骤 | Steps
-
-1\. 选择或确认下载目录（默认为系统“下载”文件夹）  
-
-&#x20;  \*\*Select or confirm the download directory (default is your system’s "Downloads" folder)\*\*
-
-2\. 从版本列表中勾选需要下载的版本，也可使用搜索快速定位  
-
-&#x20;  \*\*Check the versions you want from the list; use the search box to quickly locate a specific version\*\*
-
-3\. （可选）设置并发下载数、代理、镜像源或自定义 API  
-
-&#x20;  \*\*(Optional) Configure concurrent downloads, proxy, mirror, or custom API URL\*\*
-
-4\. 点击“开始下载”，即可自动下载对应版本 JAR 文件  
-
-&#x20;  \*\*Click "Start Download" and the corresponding JAR files will be downloaded automatically\*\*
-
-5\. 下载完成后，JAR 文件会按版本号分组存放在子文件夹中，可直接用于启动服务器  
-
-&#x20;  \*\*After download, JAR files are grouped in sub‑folders by version and can be used directly to launch your server\*\*
-
-
-
-\---
-
-
-
-\## 自行打包 | Build Your Own Executable
-
-
-
-\### 使用 PyInstaller 打包为单文件 EXE
-
-```bash
-
-pip install pyinstaller
-
-pyinstaller --onefile --windowed --name="MinecraftServerDownloader" --hidden-import=requests --hidden-import=darkdetect "Minecraft Server JAR files Download.py"
-
-```
-
-\- 打包成功后，在 `dist` 目录下可获得独立的 `.exe` 文件。
-
-\- 如需添加图标，加入 `--icon=icon.ico` 参数。
-
-
-
-\### 使用 Nuitka 打包（性能更优，推荐）
-
-```bash
-
-pip install nuitka
-
-nuitka --standalone --onefile --windows-disable-console --plugin-enable=pyqt6 --include-package=requests --include-package=darkdetect --windows-icon-from-ico=icon.ico "Minecraft Server JAR files Download.py"
-
-```
-
-\- 需要安装 C 编译器（MinGW-w64 或 MSVC）。
-
-\- 打包时间较长，但生成的 exe 启动更快、反编译难度更高。
-
-
-
-\---
-
-
-
-\## 项目贡献者 | Contributors
-
-
-
-| 贡献者 (Contributor) | 贡献内容 (Contribution) |
-
-|----------------------|------------------------|
-
-| \[Minecraft-1314](https://github.com/Minecraft-1314) | 插件完整开发 (Complete plugin development) |
-
-
-
-（欢迎提交 PR 加入贡献者列表）  
-
-\*\*Welcome to submit PR to join the contributor list!\*\*
-
-
-
-\---
-
-
-
-\## 许可协议 | License
-
-
-
-本项目采用 MIT 许可证，详情参见 \[LICENSE](LICENSE) 文件。  
-
-\*\*This project is licensed under the MIT License, see the \[LICENSE](LICENSE) file for details.\*\*
-
-
-
-\---
-
-
-
-\## 支持我们 | Support Us
-
-
-
-如果这个项目对您有帮助，欢迎点亮右上角的 Star ⭐ 支持我们，这将是对所有贡献者最大的鼓励！  
-
-\*\*If this project is helpful to you, please feel free to star it in the upper right corner ⭐ to support us, which will be the greatest encouragement to all contributors!\*\*
-
+# Minecraft All Servers JAR 
+### 我的世界全版本服务器核心仓库
+
+A **one-stop repository for Minecraft server core downloads**, integrating all versions of Server JAR files from 1.2 to 1.21. No need to search around—get the version you need with one click and quickly set up your own server!
+
+---
+
+## 核心特性 | Core Features
+- **全版本覆盖**：包含 1.2、1.3 ... 1.21 等主流版本，适配不同模组与插件需求
+  - **Full Version Coverage**: Includes major versions from 1.2 to 1.21, compatible with different mod and plugin requirements
+- **下载便捷**：按版本分类存放，目录结构清晰，直接跳转对应文件夹即可下载
+  - **Easy Download**: Classified by version with a clear directory structure—directly jump to the corresponding folder to download
+- **持续更新**：同步跟进 Minecraft 官方版本迭代，及时补充最新服务器核心文件
+  - **Continuous Updates**: Sync with official Minecraft version iterations and promptly add the latest server core files
+
+---
+
+## 版本列表 | Version List
+已收录以下版本的 Server JAR 文件，点击文件夹名称即可进入下载：
+The following versions of Server JAR files are included—click the folder name to download:
+- Minecraft 1.2 Server JAR files
+- Minecraft 1.3 Server JAR files
+- Minecraft 1.4 Server JAR files
+- Minecraft 1.5 Server JAR files
+- Minecraft 1.6 Server JAR files
+- Minecraft 1.7 Server JAR files
+- Minecraft 1.8 Server JAR files
+- Minecraft 1.9 Server JAR files
+- Minecraft 1.10 Server JAR files
+- Minecraft 1.11 Server JAR files
+- Minecraft 1.12 Server JAR files
+- Minecraft 1.13 Server JAR files
+- Minecraft 1.14 Server JAR files
+- Minecraft 1.15 Server JAR files
+- Minecraft 1.16 Server JAR files
+- Minecraft 1.17 Server JAR files
+- Minecraft 1.18 Server JAR files
+- Minecraft 1.19 Server JAR files
+- Minecraft 1.20 Server JAR files
+- Minecraft 1.21 Server JAR files
+- Minecraft 26.1 Server JAR files
+- Minecraft 26.2 Server JAR files
+
+---
+
+## 使用说明 | Usage Guide
+1. 访问本仓库：[Minecraft-All-Servers-Jar](https://github.com/Minecraft-1314/Minecraft-All-Servers-Jar)
+   1. Visit this repository: [Minecraft-All-Servers-Jar](https://github.com/Minecraft-1314/Minecraft-All-Servers-Jar)
+2. 找到对应游戏版本的文件夹并点击进入
+   2. Find the folder corresponding to your game version and click to enter
+3. 点击文件夹内的 JAR 文件，选择 `Download` 即可完成下载
+   3. Click the JAR file in the folder and select `Download` to complete the download
+
+---
+
+## 许可证 | License
+本项目基于开源许可证分发，具体条款请参阅 [LICENSE](LICENSE) 文件。
+This project is distributed under an open-source license. For specific terms, please refer to the [LICENSE](LICENSE) file.
+
+---
+
+## 反馈与建议 | Feedback & Suggestions
+若发现版本缺失、文件损坏或有其他优化建议，欢迎提交 Issue 或 Pull Request，一起完善这个实用工具～
+If you find missing versions, corrupted files, or have other optimization suggestions, please submit an Issue or Pull Request to improve this useful tool together!
+
+---
+
+## 求 Star 支持 | Request Star Support
+如果这个仓库帮你节省了找服务器核心的时间，不妨点亮右上角的 **Star** 🌟 ！你的认可就是我持续维护、更新版本的最大动力，也能让更多 Minecraft 玩家发现这个实用工具～
+If this repository has saved you time searching for server cores, please light up the **Star** 🌟 in the upper right corner! Your recognition is the greatest motivation for me to continue maintaining and updating versions, and it will also help more Minecraft players discover this useful tool!
+
+---
+
+## 项目贡献者 | Project Contributors
+感谢所有为项目付出的朋友，是你们让这个工具更加完善！
+Thank you to all friends who have contributed to the project—you have made this tool more complete!
+
+### 核心维护者 | Core Maintainers
+- [Minecraft-1314](https://github.com/Minecraft-1314)：项目发起者，负责版本同步与仓库维护
+  - [Minecraft-1314](https://github.com/Minecraft-1314): Project initiator, responsible for version synchronization and repository maintenance
+
+### 社区贡献者 | Community Contributors
+- [待补充] | [To be added]
+
+---
+
+持续关注仓库，获取最新版本服务器核心更新通知！
+Follow the repository to get notifications about the latest server core updates!
